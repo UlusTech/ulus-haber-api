@@ -38,6 +38,7 @@ export type NewsPost = {
     state: NewsPostState;
     /**
      * In CammonMark markdown format.
+     * Footnotes are rendered in an collapsed way. Treat them as sources or references.
      */
     content: string;
     createdAt: Date;
@@ -63,7 +64,6 @@ export type NewsPostVersion = {
      * Acts like a commit message.
      */
     message: string;
-
     /**
      * Null means visible to public.
      * String is the editor's reason for suppressing this version.
